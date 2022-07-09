@@ -173,6 +173,79 @@ input[type=checkbox]:checked ~ .menu{
       </style>
       
       
+        
+        
+        
+<style type="text/css">
+.skills-bar {
+    width: 500px;
+    background-color: #fbfbfb;
+    margin: 50px auto;
+    padding: 20px 20px 10px;
+    font-family: arial;
+    border-radius: 15px;
+    border: 1px solid #eee;
+}
+.skills-bar h2 {
+    text-align: center;
+    padding: 0px 0px 25px;
+    margin: 10px 0px 40px;
+    font-size: 30px;
+    font-weight: normal;
+    border-bottom: 1px solid #eaeaea;
+}
+.skills-bar label {
+    font-size: 16px;
+    text-transform: uppercase;
+    font-weight: bold;
+    color: #333;
+}
+.skills-bar label i {
+    font-size: 25px;
+    margin-right: 5px;
+    color: #4caf4f;
+}
+.bar {
+    height: 10px;
+    background-color: #eee;
+    margin: 15px 0px 30px;
+    border-radius: 10px;
+}  
+.ui-progressbar-value{
+  height: 10px;
+  background-color: #4CAF50;
+  border-radius: 10px;
+}
+/*--Responsive CSS--*/
+@media (max-width: 767px){
+.skills-bar{
+  width: 85%;
+}
+}
+</style>
+
+<script type="text/javascript">
+  $( function() {
+    $( "#cssbar" ).progressbar({
+      value: 85
+    });
+    $( "#htmlbar" ).progressbar({
+      value: 67
+    });
+    $( "#photoshopbar" ).progressbar({
+      value: 80
+    });
+    $( "#wordpressbar" ).progressbar({
+      value: 50
+    });
+    $( "#phpbar" ).progressbar({
+      value: 63
+    });
+  });
+</script
+        
+        
+        
  <style type='text/css'>
         /**********************
 /***** Services *******
@@ -327,31 +400,21 @@ input[type=checkbox]:checked ~ .menu{
     </div>
 </section>
 
-
-             <h3>My Skills</h3>
-             <p>High-performance websites results in high return visits, low bounce rates, higher conversions, engagement</p>
-             <hr>
-             <h4>HTML 5</h4>
-             <div class='progress mb-3'>
-                 <div class='progress-bar bg-success' style='width:100%'/>
-             </div>
-             <h4>CSS 3</h4>
-             <div class='progress mb-3'>
-                 <div class='progress-bar bg-success' style='width:100%'/>
-             </div>
-             <h4>JavaScript</h4>
-             <div class='progress mb-3'>
-                 <div class='progress-bar bg-success' style='width:90%'/>
-             </div>
-             <h4>PHP</h4>
-             <div class='progress mb-3'>
-                 <div class='progress-bar bg-success' style='width:80%'/>
-             </div>
-             <h4>Bootstrap</h4>
-             <div class='progress mb-3'>
-                 <div class='progress-bar bg-success' style='width:70%'/>
-             </div>
-</hr>
+<div class="skills-bar">
+  <h2>My Skills Set</h2>
+  <label><i class="fa fa-css3" aria-hidden="true"></i> CSS</label>
+  <div id="cssbar" class="bar"></div>
+  <label><i class="fa fa-html5" aria-hidden="true"></i> HTML</label>
+  <div id="htmlbar" class="bar"></div>
+  <label><i class="fa fa-wordpress" aria-hidden="true"></i> WordPress</label>
+  <div id="wordpressbar" class="bar"></div>
+  <label><i class="fa fa-paint-brush" aria-hidden="true"></i> Photoshop</label>
+  <div id="photoshopbar" class="bar"></div>
+  <label><i class="fa fa-code" aria-hidden="true"></i> PHP</label>
+  <div id="phpbar" class="bar"></div>
+</div>
+             
+             </hr>
          
      
 <div class='our-services' id='our-services'>
@@ -512,20 +575,8 @@ Build upon your experiences and skillset with the Secure Code Warrior skills pla
                       
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous"></script> 
 
-<script type='text/javascript'>
-//<![CDATA[
-   $(window).scroll(function(){ 
-  var offset = 0;
-  var sticky = false;
-  var top = $(window).scrollTop();
 
-  if ($("aside").offset().top < top) {
-   $("#PageList1").addClass("sticky");
-   sticky = true;
-  } else {
-   $("#PageList1").removeClass("sticky");
-  }
- });
-//]]>
-</script>
+        
+        
+        <script type="text/javascript"> $( function() { $( "#cssbar" ).progressbar({ value: 85 }); $( "#htmlbar" ).progressbar({ value: 67 }); $( "#photoshopbar" ).progressbar({ value: 80 }); $( "#wordpressbar" ).progressbar({ value: 50 }); $( "#phpbar" ).progressbar({ value: 63 }); }); </script>
 </body> </html>
