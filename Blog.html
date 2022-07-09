@@ -1,0 +1,488 @@
+<!doctype html> <html lang="en"> <head> <meta charset="utf-8"> <meta name="viewport" content="width=device-width, initial-scale=1"> <title>Bootstrap demo</title> <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.5/dist/umd/popper.min.js" integrity="sha384-Xe+8cL9oJa6tN/veChSP7q+mnSPaj5Bcu9mPX5F5xIGE0DVittaqT5lorf0EI7Vk" crossorigin="anonymous"></script> <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.min.js" integrity="sha384-kjU+l4N0Yf4ZOJErLsIcvOU2qSb74wXpOhqTvwVx3OElZRweTnQ6d31fXEoRD1Jy" crossorigin="anonymous"></script>
+
+
+<style type='text/css'>
+        /* UTILITIES */
+* {
+ margin: 0;
+ padding: 0;
+ box-sizing: border-box;
+}
+
+a {
+ text-decoration: none;
+}
+li {
+ list-style: none;
+}
+        /* NAVBAR STYLING STARTS */
+.navbar {
+ display: flex;
+ align-items: center;
+ justify-content: space-between;
+ padding: 20px;
+ background-color: teal;
+ color: #fff;
+}
+.nav-links a {
+ color: #fff;
+}
+/* LOGO */
+.logo {
+ font-size: 32px;
+}
+/* NAVBAR MENU */
+.menu {
+ display: flex;
+ gap: 1em;
+ font-size: 18px;
+}
+.menu li:hover {
+ background-color: #4c9e9e;
+ border-radius: 5px;
+ transition: 0.3s ease;
+}
+.menu li {
+ padding: 5px 14px;
+}
+/* DROPDOWN MENU */
+.services {
+ position: relative; 
+}
+.dropdown {
+ background-color: rgb(1, 139, 139);
+ padding: 1em 0;
+ position: absolute; /*WITH RESPECT TO PARENT*/
+ display: none;
+ border-radius: 8px;
+ top: 35px;
+}
+.dropdown li + li {
+ margin-top: 10px;
+}
+.dropdown li {
+ padding: 0.5em 1em;
+ width: 8em;
+ text-align: center;
+}
+.dropdown li:hover {
+ background-color: #4c9e9e;
+}
+.services:hover .dropdown {
+ display: block;
+}
+        /*RESPONSIVE NAVBAR MENU STARTS*/
+/* CHECKBOX HACK */
+input[type=checkbox]{
+ display: none;
+} 
+/*HAMBURGER MENU*/
+.hamburger {
+ display: none;
+ font-size: 24px;
+ user-select: none;
+}
+/* APPLYING MEDIA QUERIES */
+@media (max-width: 768px) {
+.menu { 
+ display:none;
+ position: absolute;
+ background-color:teal;
+ right: 0;
+ left: 0;
+ text-align: center;
+ padding: 16px 0;
+}
+.menu li:hover {
+ display: inline-block;
+ background-color:#4c9e9e;
+ transition: 0.3s ease;
+}
+.menu li + li {
+ margin-top: 12px;
+}
+input[type=checkbox]:checked ~ .menu{
+ display: block;
+}
+.hamburger {
+ display: block;
+}
+.dropdown {
+ left: 50%;
+ top: 30px;
+ transform: translateX(35%);
+}
+.dropdown li:hover {
+ background-color: #4c9e9e;
+}
+}
+        
+        </style>
+<style>
+     
+.hero-banner h1 {
+    font-size: 48px;
+}
+.hero-banner .btn {
+    position: relative;
+    overflow: hidden;
+    z-index: 9;
+}
+.hero-banner .btn-primary {
+    color: #2f2f41;
+    background-color: rgba(1, 164, 121, 0.1);
+    border-color: #01a479;
+}
+.hero-banner .btn:before {
+    content: &quot;&quot;;
+    background: #4c9e9e;
+    width: 4px;
+    height: 100%;
+    position: absolute;
+    left: 0;
+    top: 0;
+    z-index: -1;
+    -webkit-transition: all 0.5s ease-in-out 0s;
+    -moz-transition: all 0.5s ease-in-out 0s;
+    -ms-transition: all 0.5s ease-in-out 0s;
+    -o-transition: all 0.5s ease-in-out 0s;
+    transition: all 0.5s ease-in-out 0s;
+}
+.hero-banner .btn:hover:before {
+    width: 100%;
+}
+
+      </style>
+      
+      
+ <style>
+        /**********************
+/***** Services *******
+/*********************/
+@import url(&#39;https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css&#39;);
+#our-services{
+    padding: 60px 0;
+}
+
+#our-services h3,
+#our-services h5{
+    color: #007b5e!important;
+}
+
+#our-services a{
+    color: #007b5e!important;
+    text-decoration:none;
+}
+
+#our-services .feature .icon {
+    border-radius: 50%;
+    min-width: 65px;
+    height: 65px;
+    line-height: 65px;
+    text-align: center;
+    box-shadow: 0 2px 4px rgba(33,37,41,.1), 0 7px 14px rgba(33,37,41,.1);
+    font-size: 27px;
+    color: #007b5e!important;
+}
+        </style>
+        
+        <style>
+      .btn-secondary {
+    background-color: transparent;
+    border-color: #c60063;
+    color: #c60063;
+}
+
+      </style>
+      <style>
+  .row-footer {
+  background-color: #4c9e9e;
+  margin: 3px 0;
+}
+.footer-nav {
+  text-align: center;
+  padding: 30px 0;
+}
+.footer-nav a {
+  display: inline-block;
+  padding: 0 20px;
+}
+  </style>
+  <style>
+     *{margin:0; padding:0; box-sizing:border-box;}
+.body{
+ font-family:tahome;
+ font-weight:400;
+ background-color:#fff;
+}
+.footer{
+  padding:40px 0;
+  background-color:#fff;
+
+}
+
+      .footer ul{
+  margin-top:0;
+  padding:0;
+  list-style:none;
+  font-size:19px;
+  margin-bottom:0;
+  text-align:center;
+}
+.footer ul li a {
+     text-decoration:none;
+     
+}
+.footer ul li{
+   display: inline-block;
+   padding:0.15px;
+}
+.footer ul li a:hover{
+      apacity:1;
+      
+      
+}
+.footer .copyright{
+    margin-top:15px;
+    text-align:center;
+    font-size:14px;
+    color:#616161; 
+}
+</style>
+ </head> 
+ 
+ <body> 
+ <nav class='navbar'>
+ <!-- LOGO -->
+ <div class='logo'>menu</div>
+ <!-- NAVIGATION MENU -->
+ <ul class='nav-links'>
+ <!-- USING CHECKBOX HACK -->
+ <input id='checkbox_toggle' type='checkbox'/>
+ <label class='hamburger' for='checkbox_toggle'>&#9776;</label>
+ <!-- NAVIGATION MENUS -->
+ <div class='menu'>
+ <li><a class='nav-link' href='#home' id='home'>Home</a></li>
+ <li><a class='nav-link' href='#about'>About</a></li>
+ <li><a class='nav-link' href='#shopping'>shopping</a></li>
+ <li class='services'>
+<a href='/'>BLog</a>
+ <!-- DROPDOWN MENU -->
+ <ul class='dropdown'>
+ <li><a href='/'>E-Commerce </a></li>
+ <li><a href='/'>Mobile App Information</a></li>
+ <li><a href='/'>php education</a></li>
+ <li><a href='/'>free hosting</a></li>
+ <li><a href='/'>advertisements</a></li>
+ </ul>
+ </li>
+ <li><a class='nav-link' href='#our-services'>Services</a></li>
+ <li><a class='nav-link' href='#Portfolio'>Portfolio</a></li>
+ <li><a class='nav-link' href='#ContactForm1'>Contact</a></li>
+ </div>
+ </ul>
+ </nav>
+ 
+ 
+ <section class='hero-banner bg-light py-5'>
+    <div class='container'>
+        <div class='row row align-items-center'>
+            <div class='col-lg-5 offset-lg-1 order-lg-1'>
+                <img alt='Web Development' class='img-fluid' src='https://blogger.googleusercontent.com/img/a/AVvXsEjvJbASJ4Mr5weVFzAZD9TgNZsdXtBWsYCtcNQbQ-0GEOw4HFeMizMFYK4l-HnW5KfyoDql-KxrsC_JfFtABDwK6maEnUW3_yfFIjHaQQc4edJr8ggv28AI5oCjCopGu06YzvwuGMlaXtKPRjIx2Lql1seE3Z3WLx1Z5eHwtqTg3hi2lvPDPyzXiJPz=s320'/>
+            </div>
+            <div class='col-lg-6'>
+                <h1 class='mt-3'>Web Designing  Development</h1>
+                <p class='lead text-secondary my-5'>It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. Point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters.</p>
+                <a class='btn btn-outline-secondary btn-lg border' href='#'>Order Now</a>
+            </div>
+        </div>
+    </div>
+</section>
+
+<div class='card card-body py-5'>
+             <h3>My Skills</h3>
+             <p>High-performance websites results in high return visits, low bounce rates, higher conversions, engagement</p>
+             <hr>
+             <h4>HTML 5</h4>
+             <div class='progress mb-3'>
+                 <div class='progress-bar bg-success' style='width:100%'/>
+             </div>
+             <h4>CSS 3</h4>
+             <div class='progress mb-3'>
+                 <div class='progress-bar bg-success' style='width:100%'/>
+             </div>
+             <h4>JavaScript</h4>
+             <div class='progress mb-3'>
+                 <div class='progress-bar bg-success' style='width:90%'/>
+             </div>
+             <h4>PHP</h4>
+             <div class='progress mb-3'>
+                 <div class='progress-bar bg-success' style='width:80%'/>
+             </div>
+             <h4>Bootstrap</h4>
+             <div class='progress mb-3'>
+                 <div class='progress-bar bg-success' style='width:70%'/>
+             </div>
+</hr>
+         </div>
+         
+         <div class='our-services' id='our-services'>
+        <h3 class='text-green mb-5 h1 text-center'>Our Services</h3>
+        <!-- Features -->
+        <div class='features  mb-4'>
+          <div class='container'>
+            <div class='row'>
+              <div class='feature py-4 col-md-6 d-flex'>
+                <div class='icon text-green mr-3'><i class='fa fa-paint-brush'/></div>
+                <div class='px-4'>
+                    <h5><a class='nav-link' href='#home'>Responsive Web Design</a></h5>
+                    <p>As a web designer, I provide affordable highly responsive Full Support and Services for small and medium businesses..</p>
+                </div>
+              </div>
+              <div class='feature py-4 col-md-6 d-flex'>
+                <div class='icon text-green mr-3'><i class='fa fa-code'/></div>
+                <div class='px-4'>
+                    <h5><a class='nav-link' href='#home'>Programming</a></h5>
+                    <p>Below we have compiled a list of the most important skills for an information developer.  We ranked the top skills based on the percentage of information developer resumes that appeared in them.  For example, 7.9% of information developers resume actions contained as a skill.  Let&#39;s find out what skills an information developer actually needs in order to be successful in the workplace.</p>
+                </div>
+              </div>
+            </div>
+            <div class='row'>
+              <div class='feature py-4 col-md-6 d-flex'>
+                <div class='icon text-green mr-3'><i class='fa fa-font'/></div>
+                <div class='px-4'>
+                    <h5><a class='nav-link' href='#home'>Copywriting</a></h5>
+                    <p>Copywriters, or Marketing Writers, are responsible for producing engaging, clear text for different advertising channels such as websites, print ads and catalogs. Their duties include researching keywords, producing interesting written content and proofreading their work for accuracy and quality.</p>
+                </div>
+              </div>
+              <div class='feature py-4 col-md-6 d-flex'>
+                <div class='icon text-green mr-3'><i class='fa fa-support'/></div>
+                <div class='px-4'>
+                    <h5><a class='nav-link' href='#home'>Training  Support</a></h5>
+                    <p>Uplift your secure code skills systematically with 100% hands-on training in how to spot and fix vulnerabilities, in your choice of programming language and frameworks.
+
+Build upon your experiences and skillset with the Secure Code Warrior skills platform and move beyond passive recall to active application of your knowledge. This unique preventative approach will help make security an intrinsic part of your thought process and workflow to produce quality software - fast!</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- / Features -->
+      </div>
+      
+      
+ <section class='container' id='Portfolio'>
+   <h2 class='display-4 text-center mt-5 mb-3'>Portfolio</h2>
+   
+   <div class='row text-center'>
+      <div class='col-md-4 mb-4'>
+         <div class='card h-100'>
+            <img alt='Design' class='card-img-top' src='https://blogger.googleusercontent.com/img/a/AVvXsEigRkpiKbhHucT9ao2kajRP2i8B5D1ygIkkW2sDkN44PuDctEu0qQsrVCo4PiJYKykA-rjQHtRKKS0eDul0Q7G8IQ9zBp7p7PnMY9ha1PEtTwv-GVUVUID_ulaJ-Yt7TQCbh4afMb5QxNikZN8ng01DPYUxoyHcjRfEVhNz0PbIQIJUEr-T4YRif339'/>
+            <div class='card-body'>
+               <h4 class='card-title'>Design</h4>
+               <p class='card-text'>Deliver the best user experience 
+               with our carefully designed responsive websites and applications!</p>
+            </div>
+            <div class='card-footer py-4'>
+               <a class='btn btn-secondary' href='#'>See portfolio raquo;</a>
+            </div>
+         </div>
+      </div>
+      
+      <div class='col-md-4 mb-4'>
+         <div class='card h-100'>
+            <img alt='Development' class='card-img-top' src='https://blogger.googleusercontent.com/img/a/AVvXsEibndFF3ZeNIyepwWAYyAgQA92_z4EDTxqdyP6fqR3h0NGtuGHPO_7hMEz2VlH8aYX1pwbqY5Sydq6cxNWSwidRLCWiYZZvllTBGjLNGgyRmpokPVP2Nk2gekXVOH3kR_C994iHy7NaRb-bfu4gcZkW70HdGJxo1vnRmpiQy9-FmfDn47_qcRpGLkou'/>
+            <div class='card-body'>
+               <h4 class='card-title'>Development</h4>
+                  <p class='card-text'>You need software that works on every device. 
+                  Leverage the latest technologies and the most powerful tools!</p>
+            </div>
+            <div class='card-footer py-4'>
+               <a class='btn btn-secondary' href='#'>See projects raquo;</a>
+            </div>
+         </div>
+      </div>
+      
+      <div class='col-md-4 mb-4'>
+         <div class='card h-100'>
+            <img alt='Analytics' class='card-img-top' src='https://blogger.googleusercontent.com/img/a/AVvXsEhQGcdij9poiKrSJ4Zuwx6tAOHjgKkDm2HXBqZtOvFMQxYQv7KsHkC815QnARdH1p9tHlXOM05sUPY6j8-W0PQ8X25qigR5lQwuG4B8966ea5Nzwpgr-yYRuFdhnTzKWJeLK-7Kv1QZP6JYZp5iP3wOo1w6HQduWLP0ofOnq7sBO18WpUDN4Ej-r8Aq'/>
+            <div class='card-body'>
+               <h4 class='card-title'>Analytics</h4>
+               <p class='card-text'>Consult our experts to set up proper goals and 
+               find the best stack for your next application!</p>
+            </div>
+            <div class='card-footer py-4'>
+               <a class='btn btn-secondary' href='#'>See testimonials raquo;</a>
+            </div>
+         </div>
+      </div>
+   </div>
+</section>                
+ 
+    
+                      <br/>  
+                      
+                <footer>
+  <div class='container'>
+    <div class='row'>
+      <div class='col-sm-12'>
+
+        <div class='row-footer'>
+          <div class='footer-nav'>
+
+            <a class='btn btn-social-icon btn-google-plus' href='#'>
+              <i class='fa fa-google-plus' style='color:#ffffff;'/>
+            </a>
+            <a class='btn btn-social-icon btn-facebook' href='https://www.facebook.com/110495678239999/posts/110497998239767/?substory_index=0'>
+              <i class='fa fa-facebook' style='color:#ffffff;'/>
+            </a>
+            <a class='btn btn-social-icon btn-linkedin' href='#'>
+              <i class='fa fa-linkedin' style='color:#ffffff; '/>
+            </a>
+            <a class='btn btn-social-icon btn-twitter' href='#'>
+              <i class='fa fa-twitter' style='color:#ffffff;'/>
+            </a>
+            <a class='btn btn-social-icon btn-youtube' href='https://youtube.com/channel/UC2Sb60wSTpoV5xv1AuEuktQ'>
+              <i class='fa fa-youtube' style='color:#ffffff;'/>
+            </a>
+            <a class='btn btn-social-icon' href='#'>
+              <i class='fa fa-envelope-o' style='color:#ffffff;'/>
+            </a>
+          </div>
+
+        </div>
+      </div>
+    </div>
+
+  </div>
+  
+</footer>
+     
+      <section class='footer'>
+    <ul class='list'>
+  
+  <li>
+  <a class='nav-link' href='#home'>Home</a>
+  </li>
+  
+  <li>
+  <a class='nav-link' href='#about'>About</a>
+  </li>
+  
+  <li>
+  <a class='nav-link' href='#ContactForm1'>contcat</a>
+  </li>
+</ul>
+
+
+<p class='copyright'>
+    blog avec blogger @ 2022
+  </p>
+</section>
+ </div>
+<!-- #footer -->
+           
+                      
+                      
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous"></script> </body> </html>
